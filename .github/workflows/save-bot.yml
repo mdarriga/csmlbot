@@ -18,7 +18,7 @@ jobs:
     - run: npm ci
       working-directory: ./actions/saveBot
 
-    - run: node saveBot.js
+    - run: node index.js
       working-directory: ./actions/saveBot
       env:
         BOT_ID: 475453ed-a461-40f5-bc24-ab2d5c372d27
