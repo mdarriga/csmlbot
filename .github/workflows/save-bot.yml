@@ -18,9 +18,15 @@ jobs:
     - run: npm ci
       working-directory: .
 
-    - run: node saveBot.js
-      id: savebot
-      working-directory: .
+    # - run: node saveBot.js
+    #   id: savebot
+    #   working-directory: .
+    #   env:
+    #     CSML_CLIENT_URL: https://md-api-clients.ngrok.io
+    #     CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
+    #     CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
+    - name: CSML - update bot on dev push
+      uses: mdarriga/csml-bot-sync-action@v4
       env:
         CSML_CLIENT_URL: https://md-api-clients.ngrok.io
         CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}

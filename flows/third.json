@@ -1,0 +1,8 @@
+{
+  "name": "third",
+  "content": "start:\n say \"This is the third flow\"\n goto end\n",
+  "description": "Simple barebones flow. Code your own chatbot from this template!",
+  "commands": [
+    "second"
+  ]
+}
