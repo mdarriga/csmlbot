@@ -1,0 +1,29 @@
+/**
+ * Welcome to CSML Studio!
+ *
+ * This simple CSML starter flow works out of the box, and you can easily
+ * try it on the right hand side by clicking on `build and run`.
+ *
+ * Some useful CSML links:
+ * 👉 Getting started: https://docs.csml.dev/studio/getting-started
+ * 👉 Give CSML a 🌟 on Github: https://github.com/CSML-by-Clevy/csml-engine
+ * 👉 Join the CSML community on Slack: https://csml.dev/slack
+ */
+start:
+  // To display simple text, simply write:
+  say "Welcome to CSML Studio! 👋"
+
+  // It's easy to display images as well!
+  say Image("https://media.giphy.com/media/9PwxaMmfh1wfS/giphy.gif")
+
+  // Add some typing delay to make your conversation more realistic!
+  say Typing(2000)
+
+  // Many other components are available to create rich chatbots!
+  say Url(
+    "https://docs.csml.dev/language/sending-receiving-messages",
+    text="Look at all these components!"
+  )
+
+  // Finish the conversation
+  goto end
