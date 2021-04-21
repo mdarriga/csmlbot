@@ -19,7 +19,9 @@ jobs:
       working-directory: ./actions/saveBot
 
     - run: node index.js
+      id: savebot
       working-directory: ./actions/saveBot
       env:
         BOT_ID: 475453ed-a461-40f5-bc24-ab2d5c372d27
         CONSOLE_URL: https://md-api-console.ngrok.io
+        JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6Ik1hdGhpZXUiLCJsYXN0X2xvZ2luX2F0IjoiMjAyMS0wNC0yMFQwOToxNTo1Ny44NzdaIiwibWV0YWRhdGEiOnsiY29tcGFueV9uYW1lIjoiQ2xldnkgbG9jYWwiLCJsYXN0X3Zpc2l0ZWRfYm90IjoiMTVmYzMyYWUtZWJjYi00NmQ5LWI3NDUtNzc4NmM1NDM5ZWM4In0sInVwZGF0ZWRfYXQiOiIyMDIxLTA0LTIxVDA3OjE0OjUyLjQ4OFoiLCJjcmVhdGVkX2F0IjoiMjAxOS0wOC0wMVQwNzo0ODo1My45MTlaIiwiaWQiOiIxNTBlZmI4Yi01ZTJkLTRjZGQtODhhNS01ZTFjNzRkMDY4NjEiLCJlbWFpbCI6Im1hdGhpZXUuZGFycmlnYWRlQGNsZXZ5LmlvIiwibGFzdG5hbWUiOiJEYXJyaWdhZGUifSwiaWF0IjoxNjE4OTg5Mzk3LCJleHAiOjE2MTkwNzU3OTd9.kOnY6k82SthfICyN4AVhQqc-RBAjwBThp1LVm7IPOUM
