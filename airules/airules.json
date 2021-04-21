@@ -1,0 +1,12 @@
+[
+  {
+    "commands": [
+      "second flow",
+      "poe",
+      "tralala"
+    ],
+    "target": {
+      "flow_name": "second"
+    }
+  }
+]
