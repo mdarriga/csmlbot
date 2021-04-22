@@ -20,13 +20,20 @@ jobs:
       - run: npm ci
         working-directory: .
 
+      - name: Test get params
+        uses: mdarriga/tmp-test-action@v3
+        with:
+          build: true
+          save: true
+          create_label: true
+
       - name: Save
         run: node index.js
         id: savebot
         working-directory: .
-        with:
-          save: true
-          build: true
+        # with:
+        #   save: true
+        #   build: true
         env:
           CSML_CLIENT_URL: https://md-api-clients.ngrok.io
           CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
