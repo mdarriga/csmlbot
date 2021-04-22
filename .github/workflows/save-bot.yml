@@ -21,10 +21,9 @@ jobs:
         working-directory: .
 
       - name: CSML - Syncronize your repository with a bot on csml studio
-        uses: mdarriga/csml-bot-sync-action@v12
+        uses: mdarriga/csml-bot-sync-action@v13
         with:
           save: true
-          build: false
         env:
           CSML_CLIENT_URL: https://md-api-clients.ngrok.io
           CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
