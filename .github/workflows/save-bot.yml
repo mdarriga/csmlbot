@@ -3,10 +3,9 @@ name: Save bot example
 on:
   push:
     branches:
-    - dev
-  create:
+      - dev
     tags:
-    - '*'
+      - '*'
 
 jobs:
   container-job:
