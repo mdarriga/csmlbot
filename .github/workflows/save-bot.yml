@@ -24,6 +24,8 @@ jobs:
         uses: mdarriga/csml-bot-sync-action@v15
         with:
           save: true
+          build: true
+          create_label: true
         env:
           CSML_CLIENT_URL: https://md-api-clients.ngrok.io
           CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}

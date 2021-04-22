@@ -1,6 +1,6 @@
 {
   "name": "third",
-  "content": "start:\n say \"This is the third flow\"\n goto end\n",
+  "content": "start:\n say \"This is the third flow\"\n goto flow fourth\n",
   "description": "poepoepoepoepoe",
   "commands": [
     "second"
