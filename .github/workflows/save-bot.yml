@@ -21,7 +21,7 @@ jobs:
         working-directory: .
 
       - name: CSML - Syncronize your repository with a bot on csml studio
-        uses: mdarriga/csml-bot-sync-action@v16
+        uses: mdarriga/csml-bot-sync-action@v17
         with:
           create_label: true
         env:
