@@ -4,6 +4,9 @@ on:
   push:
     branches:
     - dev
+  create:
+    tags:
+    - '*'
 
 jobs:
   container-job:
@@ -13,21 +16,22 @@ jobs:
       image:  node:12.4-alpine
 
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
 
-    - run: npm ci
-      working-directory: .
+      - run: npm ci
+        working-directory: .
 
-    - run: node index.js
-      id: savebot
-      working-directory: .
-      env:
-        CSML_CLIENT_URL: https://md-api-clients.ngrok.io
-        CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
-        CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
-      with:
-        save: true
-        build: true
+      - name: Save
+        run: node index.js
+        id: savebot
+        working-directory: .
+        # with:
+          # save: true
+          # build: true
+        env:
+          CSML_CLIENT_URL: https://md-api-clients.ngrok.io
+          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
+          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
     # - name: CSML - update bot on dev push
     #   uses: mdarriga/csml-bot-sync-action@v4
     #   env:
