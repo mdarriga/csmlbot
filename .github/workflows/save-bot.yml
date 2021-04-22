@@ -20,27 +20,12 @@ jobs:
       - run: npm ci
         working-directory: .
 
-      - name: Test get params
-        uses: mdarriga/tmp-test-action@v3
+      - name: CSML - Syncronize your repository with a bot on csml studio
+        uses: mdarriga/csml-bot-sync-action@v12
         with:
-          build: true
           save: true
-          create_label: true
-
-      - name: Save
-        run: node index.js
-        id: savebot
-        working-directory: .
-        # with:
-        #   save: true
-        #   build: true
+          build: false
         env:
           CSML_CLIENT_URL: https://md-api-clients.ngrok.io
           CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
           CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
-    # - name: CSML - update bot on dev push
-    #   uses: mdarriga/csml-bot-sync-action@v4
-    #   env:
-    #     CSML_CLIENT_URL: https://md-api-clients.ngrok.io
-    #     CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
-    #     CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
