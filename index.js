@@ -12,7 +12,7 @@ const { BotService } = require('./bot.service');
     if (core.getInput('build')) await BotService.buildBot();
     if (core.getInput('create_label')) {
       const payload = JSON.stringify(github.context.payload, undefined, 2);
-      const tag_name = payload.ref;
+      const tag_name = payload.ref.replace('refs/tags/', '');
       await BotService.createLabel();
     }
 
