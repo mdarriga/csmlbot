@@ -1,0 +1,8 @@
+{
+  "name": "fourth",
+  "content": "start:\n say \"This is the fourth flow\"\n goto end\n",
+  "description": "poepoepoepoepoe",
+  "commands": [
+    "fourth"
+  ]
+}
